@@ -1,40 +1,149 @@
-.home-section {
-    padding-top: 64px; /* Offset for fixed navbar */
-    min-height: calc(100vh - 64px);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.home-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f2fe 0%, #f3f4f6 100%);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #f3f4f6;
+    padding: 1.5rem;
+    font-family: 'Inter', sans-serif;
 }
 
-.home-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1000px; /* Match navbar width */
-    margin: 0 auto;
+.content-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+    text-align: center;
+    max-width: 32rem;
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+    width: 100%;
 }
 
-.text-content {
-    flex: 1;
-    padding-right: 2rem;
+.content-card:hover {
+    transform: scale(1.05);
 }
 
-.text-content h2 {
-    font-size: 2rem;
-    font-weight: bold;
+.greeting {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
     margin-bottom: 1rem;
 }
 
-.text-content p {
-    font-size: 1.125rem;
+.intro {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin-bottom: 0.75rem;
 }
 
-.profile-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1d4ed8;
+    margin-bottom: 1.25rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+.skills-label {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 0.75rem;
+}
+
+.skills {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    background: #dbeafe;
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.linkedin-link {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #0a66c2;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.linkedin-link:hover {
+    background: #004182;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 80rem;
+    width: 100%;
+}
+
+.about-card, .skills-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    flex: 1;
+    min-width: 20rem;
+    max-width: 38rem;
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover, .skills-card:hover {
+    transform: scale(1.03);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.card-content {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.skills-list {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.8;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 0.5rem;
+}
+
+.skills-list strong {
+    color: #1f2937;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .about-card, .skills-card {
+        min-width: auto;
+        max-width: 32rem;
+    }
 }
